@@ -1,31 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Home Page</title>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Registration Page</title>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="navbar-container">
-            <a href="Home Page.html" class="navbar-item">Home</a>
-            <a href="Registration Page.html" class="navbar-item">Registered Users</a>
-        </div>
+      <div class="navbar-container">
+        <a href="Home Page.html" class="navbar-item">Home</a>
+        <a href="#register-section" class="navbar-item">Registered Users</a>
+      </div>
     </nav>
 
     <section class="hero is-primary is-bold">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">Welcome to the Home Page</h1>
-            </div>
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Data Entry Form</h1>
         </div>
+      </div>
     </section>
 
-    <div class="container">
-        <p>This is the home page where you can provide a description of the site or its purpose. Replace this with your own content to introduce users to your project or service.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non nisi et diam cursus condimentum. Nam tincidunt lorem a lacus tristique facilisis. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        <p>Aliquam erat volutpat. Sed imperdiet leo eu neque vestibulum, et tempus purus laoreet. Aenean aliquam lorem eget lectus facilisis, at consequat enim facilisis. Etiam vehicula purus sed justo sollicitudin, ac viverra erat pharetra. Fusce sit amet tristique risus.</p>
-    </div>
-</body>
+    <section id="register-section" class="container m-4 pl-4">
+      <form id="form" method="POST">
+        <div class="field">
+          <label class="label">First Name</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="Your First Name"
+              name="First Name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Last Name</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="Your Last Name"
+              name="Last Name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Year of Birth</label>
+          <div class="control">
+            <input
+              class="input"
+              type="number"
+              placeholder="Your Year of Birth"
+              name="Year of Birth"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Gender</label>
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="Gender" value="male" required /> Male
+            </label>
+            <label class="radio">
+              <input type="radio" name="Gender" value="female" /> Female
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Australian State</label>
+          <div class="control">
+            <div class="select">
+              <select name="Australian State" required>
+                <option value="" disabled selected>Select your state</option>
+                <option value="Australian Capital Territory">Australian Capital Territory</option>
+                <option value="New South Wales">New South Wales</option>
+                <option value="Northern Territory">Northern Territory</option>
+                <option value="Queensland">Queensland</option>
+                <option value="South Australia">South Australia</option>
+                <option value="Tasmania">Tasmania</option>
+                <option value="Victoria">Victoria</option>
+                <option value="Western Australia">Western Australia</option>
+                
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-primary" type="submit" id="submit-button">
+              Submit
+            </button>
+          </div>
+          <div class="control">
+            <button class="button is-danger" type="reset">Cancel</button>
+          </div>
+        </div>
+      </form>
+      <div id="message"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
