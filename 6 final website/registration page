@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration Page</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="Home Page.html" class="navbar-item">Home</a>
+            <a href="#register-section" class="navbar-item">Registration Page</a>
+        </div>
+    </nav>
+
+    <section class="hero is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Registration Page</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="register-section" class="container">
+        <form id="form" method="POST">
+            <div class="field">
+                <label class="label">First Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Your First Name" name="First Name"/>
+                </div>
+            </div>
+            
+            <div class="field">
+                <label class="label">Last Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Your Last Name" name="Last Name"/>
+                </div>
+            </div>
+
+            <div class="field-parent-columns">
+                <div class="field">
+                    <label class="label">Parent 1 First Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Parent 1 First Name" name="Parent 1 First Name"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Parent 2 First Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Parent 2 First Name" name="Parent 2 First Name"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-parent-columns">
+                <div class="field">
+                    <label class="label">Parent 1 Last Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Parent 1 Last Name" name="Parent 1 Last Name"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Parent 2 Last Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Parent 2 Last Name" name="Parent 2 Last Name"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-parent-columns">
+                <div class="field">
+                    <label class="label">Parent 1 Date of Birth</label>
+                    <div class="control">
+                        <input class="input" type="date" name="Parent 1 Date of Birth"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Parent 2 Date of Birth</label>
+                    <div class="control">
+                        <input class="input" type="date" name="Parent 2 Date of Birth"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-parent-columns">
+              <div class="field">
+                  <label class="label">Parent 1 Date of Death</label>
+                  <div class="control">
+                      <input class="input" type="date" name="Parent 1 Date of Death"/>
+                  </div>
+              </div>
+              <div class="field">
+                  <label class="label">Parent 2 Date of Death</label>
+                  <div class="control">
+                      <input class="input" type="date" name="Parent 2 Date of Death"/>
+                  </div>
+              </div>
+          </div>
+
+            <div class="field">
+                <label class="label">Date of Birth</label>
+                <div class="control">
+                    <input class="input" type="date" name="Date of Birth"/>
+                </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Spouse First Name</label>
+              <div class="control">
+                  <input class="input" type="text" placeholder="Spouses First Name" name="Spouse First Name"/>
+              </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Spouse Last Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Spouses Last Name" name="Spouse Last Name"/>
+            </div>
+        </div>
+
+            <div class="field">
+                <label class="label">Number of Children</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Number of Children" name="Number of Children"/>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Your Email" name="Email"/>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Address</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Your Address" name="Address"/>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Gender</label>
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="Gender" value="male"/> Male
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Gender" value="female"/> Female
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Australian State</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="Australian State">
+                            <option value="" disabled selected>Select your state</option>
+                            <option value="Australian Capital Territory">Australian Capital Territory</option>
+                            <option value="New South Wales">New South Wales</option>
+                            <option value="Northern Territory">Northern Territory</option>
+                            <option value="Queensland">Queensland</option>
+                            <option value="South Australia">South Australia</option>
+                            <option value="Tasmania">Tasmania</option>
+                            <option value="Victoria">Victoria</option>
+                            <option value="Western Australia">Western Australia</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Education History</label>
+              <div class="control">
+                <div class="select">
+                  <select name="Education History">
+                    <option value="" disabled selected>Your Education History</option>
+                    <option value="Bachelors Degree or Above">Bachelors Degree or Above</option>
+                    <option value="Tafe">Tafe</option>
+                    <option value="Secondary Education">Secondary Education</option>
+                    <option value="Primary Education">Primary Education</option>                
+                  </select>
+                </div>
+              </div>
+            </div>
+    
+            <div class="field">
+                <label class="label">Eye Colour</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="Eye Colour">
+                            <option value="" disabled selected>Your Eye Colour</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Hazel">Hazel</option>
+                            <option value="Amber">Amber</option>
+                            <option value="Gray">Gray</option>
+                            <option value="Green">Green</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Hair Colour</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="Hair Colour">
+                            <option value="" disabled selected>Your Hair Colour</option>
+                            <option value="Black">Black</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Blonde">Blonde</option>
+                            <option value="Red">Red</option>
+                            <option value="Gray">Gray</option>
+                            <option value="White">White</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field"></div>
+                <label class="label">Additional Information</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Anything extra you would like us to know" name="Additional Information"/>
+                </div>
+            </div>
+
+            <div class="field"></div>
+            <label class="label">Profile Image</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Drag and Drop Profile Here" name="Profile Image"/>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-primary" type="submit" id="submit-button">Submit</button>
+                </div>
+            </div>
+
+        </form>
+        <div id="message"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
