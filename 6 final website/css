@@ -34,37 +34,30 @@ body {
   font-size: 50px;
   text-align: center;
 }
-/* This centers the textThis centers the textThis centers the textThis centers the textThis centers the textThis centers the textThis centers the textThis centers the text */
+
 .container {
   max-width: 1000px; 
   margin: auto;
-  padding: 20px;
+  padding: 15px;
   background-color: white;
-  flex-direction: column;
 }
 
 .image-grid {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.image-grid img {
-  width: 20%;
-  border-radius: 5px;
+  gap: 50px;
 }
 
 .label {
   font-weight: bold;
 }
+/* This centers the textThis centers the textThis centers the textThis centers the textThis centers the textThis centers the textThis centers the textThis centers the text */
 
 .input, .select select {
-  width: 95%;
+  width: 90%;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 1em;
+  font-size: 15px;
 }
 
 .button {
@@ -73,11 +66,8 @@ body {
 }
 
 .button.is-primary {
-  background-color: #3273dc;
-}
-
-.button.is-danger {
-  background-color: #ff3860;
+  background-color: #0954cc;
+  font-size: 20px;
 }
 
 #message {
@@ -111,14 +101,14 @@ body {
 
 .image-top-left img:nth-of-type(1),
 .image-top-right img:nth-of-type(2) {
-  width: 200px; 
+  width: 250px; 
 }
 
 .image-top-left img:nth-of-type(2),
 .image-top-right img:nth-of-type(1) {
-  width: 200px; 
+  width: 250px; 
 }
 
 .image-bottom img {
-  width: 300px; 
+  width: 500px; 
 }
