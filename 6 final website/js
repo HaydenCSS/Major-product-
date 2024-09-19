@@ -1,21 +1,19 @@
 document.getElementById("form").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the default form submission
+  e.preventDefault();
   document.getElementById("message").textContent = "Submitting..";
   document.getElementById("message").style.display = "block";
   document.getElementById("submit-button").disabled = true;
-
-  // Collect the form data
+  //1
   var formData = new FormData(this);
   var keyValuePairs = [];
   for (var pair of formData.entries()) {
-    console.log(pair[0] + ": " + pair[1]); // Log form data
+    console.log(pair[0] + ": " + pair[1]);
     keyValuePairs.push(pair[0] + "=" + pair[1]);
   }
 
-  var formDataString = keyValuePairs.join("&");
+  var formDataString = keyValuePairs.join("&"); //1
   console.log(formDataString);
-
-  // Send a POST request to your Google Apps Script
+//1
   fetch(
     "https://script.google.com/macros/s/AKfycbw_OdkSHgfM8E4LeQ_fQkQUQnaeai8u-rW6zibOQ0KwZg828UYuCJnXZ-kEFjxerewzCQ/exec",
     {
@@ -27,9 +25,10 @@ document.getElementById("form").addEventListener("submit", function (e) {
       },
     }
   )
+  //1
     .then(function (response) {
       if (response) {
-        return response; // Assuming your script returns JSON response
+        return response; 
       } else {
         throw new Error("Failed to submit the form.");
       }
