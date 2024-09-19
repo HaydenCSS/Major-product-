@@ -13,7 +13,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
   var formDataString = keyValuePairs.join("&"); //1
   console.log(formDataString);
-//1
+//2
   fetch(
     "https://script.google.com/macros/s/AKfycbw_OdkSHgfM8E4LeQ_fQkQUQnaeai8u-rW6zibOQ0KwZg828UYuCJnXZ-kEFjxerewzCQ/exec",
     {
@@ -25,7 +25,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
       },
     }
   )
-  //1
+  //2
     .then(function (response) {
       if (response) {
         return response; 
@@ -41,12 +41,13 @@ document.getElementById("form").addEventListener("submit", function (e) {
       document.getElementById("message").style.color = "beige";
       document.getElementById("submit-button").disabled = false;
       document.getElementById("form").reset();
-
+      //3
       setTimeout(function () {
         document.getElementById("message").textContent = "";
         document.getElementById("message").style.display = "none";
       }, 2600);
     })
+    //3
     .catch(function (error) {
       console.error(error);
       document.getElementById("message").textContent =
