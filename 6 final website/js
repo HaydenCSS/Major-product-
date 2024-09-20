@@ -41,13 +41,13 @@ document.getElementById("form").addEventListener("submit", function (e) {
       document.getElementById("message").style.color = "beige";
       document.getElementById("submit-button").disabled = false;
       document.getElementById("form").reset();
-      //3
+      
       setTimeout(function () {
         document.getElementById("message").textContent = "";
         document.getElementById("message").style.display = "none";
       }, 2600);
     })
-    //3
+    
     .catch(function (error) {
       console.error(error);
       document.getElementById("message").textContent =
