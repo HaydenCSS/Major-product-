@@ -3,7 +3,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
   document.getElementById("message").textContent = "Submitting..";
   document.getElementById("message").style.display = "block";
   document.getElementById("submit-button").disabled = true;
-  //1
+  //CT2 1
   var formData = new FormData(this);
   var keyValuePairs = [];
   for (var pair of formData.entries()) {
@@ -11,11 +11,12 @@ document.getElementById("form").addEventListener("submit", function (e) {
     keyValuePairs.push(pair[0] + "=" + pair[1]);
   }
 
-  var formDataString = keyValuePairs.join("&"); //1
+  var formDataString = keyValuePairs.join("&"); 
+  //CT2 1
   console.log(formDataString);
-//2
+//CT2 2
   fetch(
-    "https://script.google.com/macros/s/AKfycbw_OdkSHgfM8E4LeQ_fQkQUQnaeai8u-rW6zibOQ0KwZg828UYuCJnXZ-kEFjxerewzCQ/exec",
+    "ttps://script.google.com/macros/s/AKfycbw_OdkSHgfM8E4LeQ_fQkQUQnaeai8u-rW6zibOQ0KwZg828UYuCJnXZ-kEFjxerewzCQ/exec",
     {
       redirect: "follow",
       method: "POST",
@@ -25,7 +26,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
       },
     }
   )
-  //2
+  //CT2 2
     .then(function (response) {
       if (response) {
         return response; 
