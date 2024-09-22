@@ -50,7 +50,6 @@ body {
 .label {
   font-weight: bold;
 }
-/* This centers the textThis centers the textThis centers the textThis centers the textThis centers the textThis centers the textThis centers the textThis centers the text */
 
 .input, .select select {
   width: 90%;
