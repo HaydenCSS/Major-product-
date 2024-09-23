@@ -1,37 +1,30 @@
 const DATA_ENTRY_SHEET_NAME = "Sheet1";
-const TIME_STAMP_COLUMN_NAME = "Timestamp";
 var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(DATA_ENTRY_SHEET_NAME);
 
+// Handles incoming requests
+// Copied from a video but editted by myself
 const doPost = (request = {}) => {
-  const { postData: { contents, type } = {} } = request;
+  const { postData: { contents } = {} } = request;
   var data = parseFormData(contents);
   appendToGoogleSheet(data);
   return ContentService.createTextOutput(contents).setMimeType(ContentService.MimeType.JSON);
 };
-//CT4 2
+
+// Parses form data into an object
+// Copied from a video but editted by myselfs
 function parseFormData(postData) {
   var data = {};
-  var parameters = postData.split('&'); // Split by '&' for key-value pairs
-  for (var i = 0; i < parameters.length; i++) {
-    var keyValue = parameters[i].split('=');
-    var key = decodeURIComponent(keyValue[0]).trim();
-    var value = decodeURIComponent(keyValue[1] || '').trim();
-    data[key] = value;
-  }
+  var parameters = postData.split('&');
+  parameters.forEach(param => {
+    var [key, value] = param.split('=');
+    data[decodeURIComponent(key).trim()] = decodeURIComponent(value || '').trim();
+  });
   return data;
 }
-//CT4 2
-//CT4 1
+
+// Appends data to the Google Sheet
 function appendToGoogleSheet(data) {
-  console.log(data); // This should show the "Australian State" key-value pair
-
-  if (TIME_STAMP_COLUMN_NAME !== "") {
-    data[TIME_STAMP_COLUMN_NAME] = new Date();
-  }
-
-
   var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
   var rowData = headers.map(headerFld => data[headerFld] || '');
   sheet.appendRow(rowData);
 }
-//CT4 1
