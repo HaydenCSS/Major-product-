@@ -1,7 +1,10 @@
+//submitting message
 document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
     document.getElementById("message").textContent = "Submitting..";
     document.getElementById("message").style.display = "block";
+    document.getElementById("message").style.backgroundColor = "grey";
+    document.getElementById("message").style.color = "beige";
     document.getElementById("submit-button").disabled = true;
 
     var formData = new FormData(this);
@@ -13,7 +16,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
   
     var formDataString = keyValuePairs.join("&"); 
     console.log(formDataString);
-
+//send to GAPs
     fetch(
       "https://script.google.com/macros/s/AKfycbw_OdkSHgfM8E4LeQ_fQkQUQnaeai8u-rW6zibOQ0KwZg828UYuCJnXZ-kEFjxerewzCQ/exec",
       {
@@ -25,13 +28,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
         },
       }
     )
-      .then(function (response) {
-        if (response) {
-          return response; 
-        } else {
-          throw new Error("Failed to submit the form.");
-        }
-      })
+      //success response
       .then(function (data) {
         document.getElementById("message").textContent =
           "Data submitted successfully!";
@@ -44,13 +41,23 @@ document.getElementById("form").addEventListener("submit", function (e) {
         setTimeout(function () {
           document.getElementById("message").textContent = "";
           document.getElementById("message").style.display = "none";
-        }, 2600);
+        }, 2000);
       })
-      
+
+      //error response
       .catch(function (error) {
         console.error(error);
         document.getElementById("message").textContent =
           "An error occurred while submitting the form.";
         document.getElementById("message").style.display = "block";
+        document.getElementById("message").style.backgroundColor = "crimson";
+        document.getElementById("message").style.color = "beige";
+        document.getElementById("submit-button").disabled = false;
+        document.getElementById("form").reset();
+
+        setTimeout(function () {
+            document.getElementById("message").textContent = "";
+            document.getElementById("message").style.display = "none";
+          }, 2000);
       });
   });
