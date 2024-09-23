@@ -10,7 +10,7 @@
     <nav class="navbar">
         <div class="navbar-container">
             <a href="Home Page.html" class="navbar-item">Home</a>
-            <a href="#register-section" class="navbar-item">Registration Page</a>
+            <a href="Registration Page.html" class="navbar-item">Registration Page</a>
         </div>
     </nav>
 
