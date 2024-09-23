@@ -18,7 +18,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     console.log(formDataString);
 //send to GAPs
     fetch(
-      "https://script.google.com/macros/s/AKfycbw_OdkSHgfM8E4LeQ_fQkQUQnaeai8u-rW6zibOQ0KwZg828UYuCJnXZ-kEFjxerewzCQ/exec",
+      "https://script.google.com/macros/s/AKfycbyPUcmhmd75xmWb5CUE1KUr06uDsxaWhQCqCphZwLZZNa_prlxiuTEG06rXi8ZB1Eo/exec",
       {
         redirect: "follow",
         method: "POST",
