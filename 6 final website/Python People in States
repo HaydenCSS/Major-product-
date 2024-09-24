@@ -19,14 +19,14 @@ df = pd.DataFrame(worksheet.get_all_records())
 # Create a column chart
 plt.figure(figsize=(10, 6))
 
-# Count amount in each category
+# Count amount in the desired category
 state_counts = df['Australian State'].value_counts()
 
 # Create a bar plot
 sns.barplot(x=state_counts.index, y=state_counts.values,  palette=['blue', 'green', 'red', 'purple', 'orange', 'cyan', 'magenta'])
 plt.title('Number of Family Members by Australian State')
 plt.xlabel('Australian State')
-plt.ylabel('Count of Family Members')
+plt.ylabel('Family Members')
 
 # Rotate x-axis labels
 plt.xticks(rotation=45)
