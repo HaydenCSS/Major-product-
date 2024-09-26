@@ -17,7 +17,6 @@ document.getElementById("form").addEventListener("submit", function (e) {
     var formDataString = keyValuePairs.join("&"); 
     console.log(formDataString);
 //send to GAPs
-// lines 21-31 i found from a youtube video
     fetch(
       "https://script.google.com/macros/s/AKfycbyPUcmhmd75xmWb5CUE1KUr06uDsxaWhQCqCphZwLZZNa_prlxiuTEG06rXi8ZB1Eo/exec",
       {
